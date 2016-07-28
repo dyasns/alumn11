@@ -1,0 +1,58 @@
+.img-profile {
+ border-radius: 100%;
+ border: 3px solid grey;
+}
+.navbar {
+ background:black;
+ color:white;
+}
+.navbar a {
+ color:white;
+}
+.left-nav {
+ padding : 5px;
+ font-size: 15px;
+}
+.left-nav ul {list-style:none;padding:0;font-size: 16px;}.left-nav ul li { margin-top: 0px; padding: 3px;}
+.left-name{
+ line-height: 25px;
+ padding : 10px 0 0 0;
+ min-height: 90px;
+}
+.left-nav ul li a:hover {
+ text-decoration:none;
+ color:black;
+}
+.left-nav a {
+ color:black;
+}
+.left-name img{
+ margin: 10px 20px 10px 10px;
+}
+.left-name p {
+ margin: 10px 0 0 0 ;
+}
+.profile {
+ min-height: 100vh;
+ margin: 40px 0 40px 0;
+}
+.top-profile,.body-profile{
+ margin-top: 10px;
+ padding: 10px;
+ min-height: 200px;
+}
+.top-profile img {
+ margin: 3px;
+}
+.top-profile .main-name {
+ font-size: 30px;
+}
+.top-profile .img-profile {
+ margin: 10px;
+}
+.affix {
+ min-width: 90px;
+}
+hr {
+ margin:0;
+}

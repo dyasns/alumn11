@@ -1,0 +1,50 @@
+
+
+ .navbar {
+  border-radius:0;
+  margin-bottom:0;
+  border:1px solid #222222;
+ }
+ .big {
+  font-size : 100px;
+  margin-bottom:0;
+  position:relative;
+ }
+ .awal {
+ min-height:90vh;
+ padding-top:90px;
+ }
+ .blue {
+ min-height:670px;
+ background:blue;
+ }
+ .grey {
+ min-height:670px;
+ background:grey;
+ }
+ .green {
+ min-height:670px;
+ background:green;
+ }
+ .carousel{
+ z-index:-1;
+ }
+ .navbar-toggle {
+ border:none;
+ }
+ .navbar-toggle:hover {
+ background :none;
+ }
+ .input-group{
+  margin-top:9px;
+ }
+ .input-group-addon {
+ background:white;
+ }
+ .login-box, .register-box {
+    width: 360px;
+    margin: 7% auto;
+    margin-top: 7%;
+    margin-right: auto;
+    margin-bottom: 7%;
+    margin-left: auto;}
