@@ -22,6 +22,16 @@ class User extends CI_Controller {
 	    $data['content']="index";
 		$this->load->view('user/template',$data);
 	}
+	function ganti_password()
+	{
+	    $data['content']="ganti_password";
+		$this->load->view('user/template',$data);
+	}
+	function ganti_profile()
+	{
+	    $data['content']="ganti_profile";
+		$this->load->view('user/template',$data);
+	}
 }
 
 /* End of file welcome.php */
