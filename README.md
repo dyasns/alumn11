@@ -1,9 +1,7 @@
 # ALUMN<strong>11</strong>
-Situs alumni smk11 bandung.
+Situs tidak resmi alumni smk11 bandung.
 - CI
-- PHP 7
+- PHP 5
 - MYSQL
 - BOOTSTRAP
 - JQUERY
-
-FEEL FREE TO CONTRIBUTE BRADA ~
