@@ -32,6 +32,11 @@ class User extends CI_Controller {
 	    $data['content']="ganti_profile";
 		$this->load->view('user/template',$data);
 	}
+	function event()
+	{
+	    $data['content']="event";
+		$this->load->view('user/template',$data);
+	}
 }
 
 /* End of file welcome.php */

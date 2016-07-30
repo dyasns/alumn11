@@ -1,35 +1,3 @@
-<nav class="navbar white navbar-inverse">
-    <div class="col-md-6 col-xs-6 navbar-header">
-      <a href="#">ALUMN<strong>11</strong></a>
-	</div>
-</nav>
-<style>
- .form-edit-height-textare{
-  min-height: 100px;
- }
- .no-padding-left {
-  padding-left:0;
- }
-</style>
-<div class="container-fluid">
- <div class="col-md-3">
-  <div data-spy="affix" data-offset-top="70">
-   <div class="left-name text-left">
-    <img src="<?php echo base_url();?>assets/img/user/img-small.jpg" class="img img-rounded img-responsive pull-left">
-    <p><b>Zaky Muhammad Yopi Rusyana</b><br><span class="small">online</span></p>
-   </div>
-   <div class="left-nav">
-    <ul>
-    <li class="h-nav"><strong>MENU</strong></li>
-    <li><span class="fa fa-user"></span>  <a href="<?php echo base_url();?>index.php/user/">Profile</a></li>
-    <li><span class="fa fa-lock"></span> <a href="<?php echo base_url();?>index.php/user/ganti_password">Ganti Password</a></li>
-    <li><span class="fa fa-calendar"></span> <a href="#">Event</a></li>
-    <li><span class="fa fa-sign-out"></span> <a href="#">Keluar</a></li>
-    </ul>
-   </div>
-  </div>
- </div>
- <!-- end - nav -->
  <div class="col-md-9">
  <div class="profile">
   <div class="top-profile">
@@ -77,6 +45,18 @@
    </div>
    <div class="row">
     <div class="col-md-6">
+	
+<style>
+ .form-edit {
+  min-height:130px;
+ }
+ .form-edit-height-textare{
+  min-height: 120px;
+ }
+ .no-padding-left {
+  padding-left:0;
+ }
+</style>
     <h3>Sosial Media <a class="small" href='<?php echo base_url();?>index.php/user/ganti_profile'></h3>
 
  	  <div class="input-group col-md-10">

@@ -19,7 +19,32 @@
   <link href="<?php echo base_url();?>assets/css/animate.css" rel="stylesheet">
 </head>
 <body>
+<nav class="navbar white navbar-inverse">
+    <div class="col-md-6 col-xs-6 navbar-header">
+      <a href="#">ALUMN<strong>11</strong></a>
+	</div>
+</nav>
+<div class="container-fluid">
+ <div class="col-md-3">
+  <div data-spy="affix" data-offset-top="70">
+   <div class="left-name text-left">
+    <img src="<?php echo base_url();?>assets/img/user/img-small.jpg" class="img img-rounded img-responsive pull-left">
+    <p><b>Zaky Muhammad Yopi Rusyana</b><br><span class="small"><i class="fa fa-circle text-success"></i> Online</span></p>
+   </div>
+   <div class="left-nav">
+    <ul>
+    <li class="h-nav"><strong>MENU</strong></li>
+    <li><a href="<?php echo base_url();?>index.php/user/"><i class="fa fa-user"></i><span>Profile</span></a></li>
+    <li><a href="<?php echo base_url();?>index.php/user/ganti_password"><i class="fa fa-lock"></i><span>Ganti Password</span></a></li>
+    <li><a href="<?php echo base_url();?>index.php/user/event"><i class="fa fa-calendar"></i><span>Event</span></a></li>
+    <li><a href="<?php echo base_url();?>index.php/user/#"><i class="fa fa-sign-out"></i><span>Keluar</span></a></li>
+    </ul>
+   </div>
+  </div>
+ </div>
  <?php $this->load->view("user/".$content);?>
+   </div>
+  </div>
 	<div class="container-fluid footer">
 	 <div class="container">
 	  <span>&copy;2016 ALUMN<strong>11</strong></span>&nbsp;<span>ALL RIGHTS RESERVED.</span><br>
