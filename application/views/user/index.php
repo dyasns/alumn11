@@ -1,50 +1,116 @@
  <div class="col-md-9">
- <div class="profile">
-  <div class="top-profile">
-  <div class="row">
-  <div class="col-md-3">
-  <div class="img-profile pull-left"> 
-  <img src="<?php echo base_url();?>assets/img/user/img.jpg" class="img img-rounded img-responsive">
-  </div>
-  </div>
-  <div class="col-md-8">
-  <div class="name-profile">
-   <p class="main-name"><b>Zaky Muhammad Yopi Rusyana </b></span><a class="small" href='<?php echo base_url();?>index.php/user/ganti_profile'><span class="fa fa-pencil"></span></a></p>
-   <p class="text-muted">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-  </div>
-  </div>
-  <div class="col-md-2"><strong>Participate</strong><br><span class="fa fa-check" aria-hidden="true"></span>99
-  </div>
-  <div class="col-md-2"><strong>Event</strong><br><span class="fa fa-calendar" aria-hidden="true"> 0</span>
-  </div>
- </div>
- </div>
- <hr>
- <div class="body-profile">
-  <div class="row">
-   <div class="col-md-6">
-   <h3>Contact <a class="small" href='<?php echo base_url();?>index.php/user/ganti_profile'><span class="fa fa-pencil"></span></a></h3>
-   <p><span class="fa fa-phone" aria-hidden="true"> 081-313-331-2<p>
-   <p><span class="fa fa-location-arrow" aria-hidden="true"> invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit. Labore<p>
-   <p><span class="fa fa-envelope" aria-hidden="true"> Lorem@gadho.com<p>
+ <link rel="stylesheet" href="<?php echo base_url();?>assets/css/dataTables.bootstrap.css">
+ <h1>Your Last Event</h1>
+ <div class="col-md-12">
+  <div class="box-notif">
+   <div class="col-md-3 col-xs-6">
+    <div class="box-3 text-center">
+	 <p class="main-title">31K</p>
+	 <div class="box-3-caption"> 
+	  <i class="fa fa-envelope"></i>&nbsp;People Invited
+	 </div>
+	</div>
    </div>
-   <div class="col-md-6">
-   <h3>Sosial Media <a class="small" href='<?php echo base_url();?>index.php/user/ganti_profile'><span class="fa fa-pencil"></span></a></h3>
-    <div class="col-md-6">
-   <p><span class="fa fa-facebook-square" aria-hidden="true"> <a href='#'>ALUMN11</a><p>
-   <p><span class="fa fa-twitter-square" aria-hidden="true"> <a href='#'>ALUMN11</a><p>
-   <p><span class="fa fa-instagram" aria-hidden="true"> <a href='#'>ALUMN11</a><p>
-   <p><span class="fa fa-snapchat-square" aria-hidden="true"> <a href='#'>ALUMN11</a><p>
-   <p><span class="fa fa-pinterest-square" aria-hidden="true">  <a href='#'>ALUMN11</a><p>
-   <p><span class="fa fa-google-plus-square" aria-hidden="true">  <a href='#'>ALUMN11</a><p>
-   </div><div class="col-md-6">
-   <p><span class="fa fa-steam-square" aria-hidden="true">  <a href='#'>ALUMN11</a><p>
-   <p><span class="fa fa-github-square" aria-hidden="true">  <a href='#'>ALUMN11</a><p>
-   <p><span class="fa fa-linkedin-square" aria-hidden="true">  <a href='#'>ALUMN11</a><p>
-   <p><span class="fa fa-youtube" aria-hidden="true">  <a href='#'>ALUMN11</a><p>
+   <div class="col-md-3 col-xs-6">
+    <div class="box-3 text-center">
+	 <p class="main-title">20K</p>
+	 <div class="box-3-caption"> 
+	  <i class="fa fa-calendar-check-o"></i>&nbsp;People Participate
+	 </div>
+	</div>
    </div>
+   <div class="col-md-3 col-xs-6">
+    <div class="box-3 text-center">
+	 <p class="main-title">2K</p>
+	 <div class="box-3-caption"> 
+	  <i class="fa fa-calendar-times-o"></i>&nbsp;People Decline
+	 </div>
+	</div>
+   </div>
+   <div class="col-md-3 col-xs-6">
+    <div class="box-3 text-center">
+	 <p class="main-title">9K</p>
+	 <div class="box-3-caption"> 
+	  <i class="fa fa-hourglass-half"></i>&nbsp;Waiting
+	 </div>
+	</div>
    </div>
   </div>
- </div>
- </div>
+  </div>
+  <div class="col-md-12 col-xs-12 highlight-last-event">
+   <h3>REUNI bersama tahun 2011 / 2016</h3>
+   <p class="invitation-grup">
+    <span class="label label-success">SMKN 11 BDG 2015/2016</span>
+	<span class="label label-warning">SMKN 11 BDG 2014/2015</span>
+	<span class="label label-danger">SMKN 11 BDG 2013/2014</span>
+	<span class="label label-info">SMKN 11 BDG 2012/2013</span>
+	<span class="label label-success">SMKN 11 BDG 2011/2012</span>
+	<a href='#'><span class="fa-ellipsis-v fa" title="more"></a></span>
+   </p>
+   <p class="highlight">
+    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+	<a href='#'><span class="fa-ellipsis-v fa" title="more"></span></a><br>
+	<span class="text-muted small">
+	7:37 AM 02-Aug-16 | <a href='#'><i class="fa fa-pencil">&nbsp;Edit</a></i></span>
+   </p>
+  </div>
+  <div class="col-md-12">
+  <h1>Pesan dari teman anda</h1>
+  <div class="box-body box-table">
+                  <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th>Nama</th>
+                        <th>Tanggal</th>
+                        <th>Deskripsi</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Asep Saepulloh</td>
+                        <td>15-Aug-2016</td>
+                        <td>Gabisa datang nih ada keperluan mendadak guys, sorry ya, salam salam aja buat yang disana</td>
+                      </tr>
+                      <tr>
+                        <td>Asep Saepulloh</td>
+                        <td>15-Aug-2016</td>
+                        <td>Gabisa datang nih ada keperluan mendadak guys, sorry ya, salam salam aja buat yang disana</td>
+                      </tr>
+                      <tr>
+                        <td>Asep Saepulloh</td>
+                        <td>15-Aug-2016</td>
+                        <td>Gabisa datang nih ada keperluan mendadak guys, sorry ya, salam salam aja buat yang disana</td>
+                      </tr>
+                      <tr>
+                        <td>Asep Saepulloh</td>
+                        <td>15-Aug-2016</td>
+                        <td>Gabisa datang nih ada keperluan mendadak guys, sorry ya, salam salam aja buat yang disana</td>
+                      </tr>
+                      <tr>
+                        <td>Asep Saepulloh</td>
+                        <td>15-Aug-2016</td>
+                        <td>Gabisa datang nih ada keperluan mendadak guys, sorry ya, salam salam aja buat yang disana</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+			</div>
+   </div>
+<script src="<?php echo base_url();?>assets/js/jquery.dataTables.min.js"></script> 
+<script src="<?php echo base_url();?>assets/js/dataTables.bootstrap.min.js"></script> 
+<script>
+		$(function(){
+		$("#example1").DataTable();
+        $('#example2').DataTable({
+          "paging": true,
+          "lengthChange": false,
+          "searching": false,
+          "ordering": true,
+          "info": true,
+          "autoWidth": true
+         });
+        });
+		
+	</script>
+  </div>
  </div>

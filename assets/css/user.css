@@ -19,24 +19,30 @@
  padding : 5px;
  font-size: 15px;
 }
-.left-nav ul {list-style:none;padding:0;font-size: 16px;}.left-nav ul li { margin-top: 0px; padding: 3px;}
+.left-nav ul {list-style:none;padding:0;font-size: 15px;}.left-nav ul li { margin-top: 0px; padding: 3px;}
 .left-name{
  line-height: 25px;
- padding : 10px 0 0 0;
+ padding : 20px 0 0 0;
  min-height: 90px;
 }
 .left-nav ul li a:hover {
- text-decoration:none;
  color:black;
+ text-decoration:underline;
+ cursor:pointer;
+ }
+.left-name .small {
+ font-size : 15px;
+ top:0;
 }
 .left-nav a {
  color:black;
 }
-.left-name img{
- margin: 10px 20px 10px 10px;
+.tree li {
+ margin-left: 20px;
+ font-size: 14px;
 }
-.left-name p {
- margin: 10px 0 0 0 ;
+.left-name img{
+ margin: 5px 10px 10px 5px;
 }
 .profile {
  min-height: 100vh;
@@ -61,4 +67,47 @@
 }
 hr {
  margin:0;
+}
+.footer-user {
+ background:white;
+ line-height: 20px;
+ color:black;
+ padding:10px 0 10px 20px;
+}
+.box-notif {
+ margin: 20px 0 15px 0;
+ min-height:150px;
+ border-bottom:1px solid lightgrey;
+}
+.box-3 .main-title{
+ font-size: 70px;
+ margin:0;
+}
+.box-3-caption {
+ width:100%;
+ background:black;
+ color:white;
+ font-size: 20px;
+}
+.highlight-last-event .label{
+ padding: 2px 3px;
+ font-size: 12px;
+}
+.box-table {
+ margin: 10px 0 10px 0;
+}
+.tujuan-label{
+ margin-top: 10px;
+}
+.tujuan-label .alert {
+ padding: 2px 3px;
+ top:0;
+ right:0;
+ margin: 2px 3px;
+}
+.tujuan-label i {
+ cursor:pointer;
+}
+.tujuan-label label{
+ margin-bottom:0;
 }

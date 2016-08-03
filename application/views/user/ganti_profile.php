@@ -57,7 +57,7 @@
   padding-left:0;
  }
 </style>
-    <h3>Sosial Media <a class="small" href='<?php echo base_url();?>index.php/user/ganti_profile'></h3>
+    <h3>Sosial Media</h3>
 
  	  <div class="input-group col-md-10">
  		<span class="input-group-addon">
