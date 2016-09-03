@@ -1,4 +1,4 @@
- <div class="col-md-9">
+ <div class="col-md-10">
  <div class="profile">
   <div class="top-profile">
   <div class="row">
@@ -7,10 +7,20 @@
   <img src="<?php echo base_url();?>assets/img/user/img.jpg" class="img img-rounded img-responsive">
   </div>
   </div>
+  <?php
+	foreach($profile as $row){
+	 $nama = $row->nama;
+	 $email = $row->email;
+	 $bio = $row->bio;
+	 $alamat = $row->alamat;
+	 $hp = $row->hp;
+	 $tgl = $row->tanggal_lahir;
+	}
+  ?>
   <div class="col-md-8">
   <div class="name-profile">
-   <p class="main-name"><b>Zaky Muhammad Yopi Rusyana </b></span><a class="small" href='<?php echo base_url();?>index.php/user/ganti_profile'><span class="fa fa-pencil"></span></a></p>
-   <p class="text-muted">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+   <p class="main-name"><b><?= $nama;?></b>&nbsp;</span><a class="small" href='<?php echo base_url();?>index.php/user/ganti_profile'><span class="fa fa-pencil"></span></a></p>
+   <p class="text-muted"><?= $bio;?></p>
   </div>
   </div>
   <div class="col-md-3"><strong>Participate</strong><br><span class="fa fa-check" aria-hidden="true">&nbsp;99</span>
@@ -24,9 +34,9 @@
   <div class="row">
    <div class="col-md-6">
    <h3>Contact <a class="small" href='<?php echo base_url();?>index.php/user/ganti_profile'><span class="fa fa-pencil"></span></a></h3>
-   <p><span class="fa fa-phone" aria-hidden="true"> 081-313-331-2<p>
-   <p><span class="fa fa-location-arrow" aria-hidden="true"> invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit. Labore<p>
-   <p><span class="fa fa-envelope" aria-hidden="true"> Lorem@gadho.com<p>
+   <p><span class="fa fa-phone" aria-hidden="true">&nbsp;</span><?= $hp;?><p>
+   <p><span class="fa fa-location-arrow" aria-hidden="true">&nbsp;</span><?= $alamat;?><p>
+   <p><span class="fa fa-envelope" aria-hidden="true">&nbsp;</span><?= $email;?><p>
    </div>
    <div class="col-md-6">
    <h3>Sosial Media <a class="small" href='<?php echo base_url();?>index.php/user/ganti_profile'><span class="fa fa-pencil"></span></a></h3>

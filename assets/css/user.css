@@ -9,8 +9,20 @@
  width:20px;
 }
 .navbar {
- background:black;
  color:white;
+ background:black;
+}
+.navbar-header {
+ color:white;
+}
+.collapsed-left {
+ cursor:pointer;
+}
+.sidebar-left {
+ min-height: 100vh;
+}
+.row-main {
+ overflow-x:hidden;
 }
 .navbar a {
  color:white;
@@ -73,6 +85,7 @@ hr {
  line-height: 20px;
  color:black;
  padding:10px 0 10px 20px;
+ margin-top: 50px;
 }
 .box-notif {
  margin: 20px 0 15px 0;
@@ -110,4 +123,10 @@ hr {
 }
 .tujuan-label label{
  margin-bottom:0;
+}
+.no-shadow {
+ box-shadow:none;
+}
+.no-padding{
+ padding:0;
 }

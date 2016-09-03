@@ -1,52 +1,114 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
 class User extends CI_Controller {
-
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -  
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in 
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
+	function __construct(){
+		parent::__construct();
+		if(!isset($_SESSION))
+			session_start();
+		if(!($this->session->userdata('logged_in')))
+		 redirect('login');
+	}
+	private function profile_bawaan(){
+    	$session = $this->session->userdata('logged_in');
+        return $this->user_model->check_profile($session['id_user']);
+	}
 	public function index()
 	{
+    	$session = $this->session->userdata('logged_in');
+        $data['data']= $this->profile_bawaan();
 	    $data['content']="index";
 		$this->load->view('user/template',$data);
 	}
-	function ganti_password()
+	function act_password()
 	{
+	 if($this->input->post('submit')){
+		$oldpassword = $this->input->post('oldpassword');
+		$newpassword = $this->input->post('newpassword');
+		$this->form_validation->set_rules('oldpassword', 'Username', 'required|htmlspecialchars|trim');
+		$this->form_validation->set_rules('newpassword', 'Username', 'required|htmlspecialchars|trim');
+		 if($this->form_validation->run()==false){
+		  echo validation_errors();
+		 }
+		 else {
+		  $salt = "1Yb3X";
+		  $session=$this->session->userdata('logged_in');
+		  $username = $session['username'];
+		  $oldpassword = crypt("$oldpassword","$1$$salt$");
+		  $oldpassword = substr($oldpassword,9,22);
+		  $check_exist = $this->user_model->check_password_exist($username,$oldpassword);
+		  if($check_exist){
+		  $newpassword = crypt("$newpassword","$1$$salt$");
+		   $newpassword = substr($newpassword,9,22);
+		   $this->user_model->update_password($username,$newpassword,$oldpassword);
+		   $message = array('message'=>'Password anda berhasil diubah !','class'=>'alert-success','icon'=>'<i class="fa fa-check"></i>');
+		   $this->session->set_flashdata('item',$message);
+		   $this->session->keep_flashdata('item',$message);
+		   redirect('user/ganti_password','refresh');
+		   }
+		   else{
+		   $message = array('message'=>'Ubah password gagal, coba beberapa saat lagi !','class'=>'alert-danger','icon'=>'<i class="fa fa-times"></i>');
+		   $this->session->set_flashdata('item',$message);
+		   $this->session->keep_flashdata('item',$message);
+		   redirect('user/ganti_password','refresh');
+		   }
+		 }
+		}
+		echo "a";
+	}
+	function ganti_password(){
+		$data['data']= $this->profile_bawaan();
 	    $data['content']="ganti_password";
 		$this->load->view('user/template',$data);
 	}
 	function ganti_profile()
-	{
+	{	$data['data']=$this->profile_bawaan();
+	
 	    $data['content']="ganti_profile";
 		$this->load->view('user/template',$data);
 	}
-	function profile()
+	function profile($username)
 	{
-	    $data['content']="profile";
+ 	$data['data']=$this->profile_bawaan();	
+	   if(!$username){
+	   $session=$this->session->userdata('logged_in'); echo $session['username'];
+	   $username = $session['username'];
+	    redirect("user/profile/$username");
+	   }
+	   else
+	   {
+	    $data['profile']=$this->user_model->cari_data_user($username);
+		if($data['profile']){
+		$data['content']="profile";
 		$this->load->view('user/template',$data);
+		}
+		 else{
+		  $data['content']="../page_errors/404";
+		  $this->load->view('user/template',$data);
+		 }
+	   }
 	}
 	function event()
-	{
+	{	
+		$data['data']=$this->profile_bawaan();
+	
 	    $data['content']="event";
 		$this->load->view('user/template',$data);
 	}
 	function buat_event(){
+		$data['data']=$this->profile_bawaan();
+	
 	    $data['content']="buat_event";
 		$this->load->view('user/template',$data);
 	}
+	function logout()
+	{
+	$session = $this->session->userdata('logged_in');
+	$id_user = $session['id_user'];
+	$now = $this->main_model->datenow();
+	 foreach($now as $datetime)
+	  $now = $datetime->sekarang;
+	  $this->login_model->check_logout($id_user,$now);
+	$this->session->unset_userdata('logged_in');
+	session_destroy();
+	redirect('beranda','refresh');
+	}
 }
-
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */

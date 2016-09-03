@@ -1,6 +1,6 @@
  <link href="<?PHP echo base_url();?>assets/css/datepicker.css" rel="stylesheet">
  <link rel="stylesheet" href="<?php echo base_url();?>assets/css/dataTables.bootstrap.css">
- <div class="col-md-9 content">
+ <div class="col-md-10 content">
   <h1>Calendar Event</h1>
   <div class="row">
 	<div class="col-md-4">
@@ -52,14 +52,14 @@
                         <td>15-Aug-2016</td>
                         <td>Gedung Merdeka</td>
                         <td>Zaky</td>
-                        <td><i class="glyphicon glyphicon-search"></i></td>
+                        <td><i class="fa fa-search"></i></td>
                       </tr>
                       <tr>
                         <td>Reuni Akbar 2015/2000</td>
                         <td>21-Feb-2020</td>
                         <td>Gg karya bakti 2 no 55 Bandung Jawa Barat</td>
                         <td>Setiabudi</td>
-                        <td><i class="glyphicon glyphicon-search"></i></td>
+                        <td><i class="fa fa-search"></i></td>
                       </tr>
                     </tbody>
                     <tfoot>

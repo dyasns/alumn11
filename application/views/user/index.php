@@ -1,4 +1,4 @@
- <div class="col-md-9">
+ <div class="col-md-10">
  <link rel="stylesheet" href="<?php echo base_url();?>assets/css/dataTables.bootstrap.css">
  <h1>Your Last Event</h1>
  <div class="col-md-12">

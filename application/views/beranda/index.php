@@ -1,7 +1,7 @@
 <div class="container-fluid top-menu">
  <div class="container text-right">
   <ul class="top-menu-list ">
-   <li><a href="<?php echo base_url();?>index.php/beranda/login">LOGIN</a></li>
+   <li><a href="#" class="toggle-sidebar-right">LOGIN</a></li>
    <li><a href="#">FORUM</a></li>
    <li><a href="#">CONTACT</a></li>
    <li><a href="#">ABOUT US</a></li>
@@ -9,21 +9,25 @@
  </div>
 </div>
 <nav class="navbar white navbar-inverse" data-spy="affix" data-offset-top="39">
+<div class="container">
     <div class="col-md-6 col-xs-6 navbar-header">
       <a href="#">ALUMN<strong>11</strong></a>
 	</div>
+</div>
 	</nav>
 <div class="container-fluid no-padding">
  <div class="container-fluid cl-1 ">
+  <div class="container">
     <div class="white-wrap col-md-7">
 	 <h2>Selamat datang ! </h2>
 	 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.<br> Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 	</div>
 	</div>
+	</div>
 </div>
    <div class="container">
    <div class="cl-2 white text-center ">
-    <h2 class="animate-fadeIn animate">Statistik</h2>
+    <h2>Statistik</h2>
 	<span class="text-muted">Lorem ipsum dolor sit amet.</span>
     <div class="row">
 	 <div class="col-md-4 text-center">
@@ -79,19 +83,19 @@
                     <div class="col-sm-4">
                         <div class="form-group">
                             <label for="name" id="LabelName">Name</label>
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" title="Please enter your name (at least 2 characters)">
+                            <input type="text" required class="form-control" name="name" id="name" placeholder="Enter name" title="Please enter your name (at least 2 characters)">
                         </div>
                         <div class="form-group" >
                             <label for="email" id='LabelEmail'>Email</label>
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" title="Please enter a valid email address">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" title="Please enter a valid email address" required>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="form-group">
                             <label for="comments" id="LabelComment">Comments</label>
-                            <textarea name="comment" class="form-control" id="comments" cols="3" rows="5" placeholder="Enter your message…" title="Please enter your message (at least 10 characters)"></textarea>
+                            <textarea name="comment" required class="form-control" id="comments" cols="3" rows="5" placeholder="Enter your message…" title="Please enter your message (at least 10 characters)"></textarea>
                         </div>
-                        <input type='submit' class="form-control" value="Kirim"></div>
+                        <button type='submit' class="btn btn-info" value="Kirim">Kirim</button></div>
 					
                 </form>
                 <div class="col-sm-4 text-left">

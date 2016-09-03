@@ -36,10 +36,8 @@
  }
  .login-box{
     width: 360px;
-    margin: 7% auto;
-    margin-top: 7%;
+    margin-top: 5%;
     margin-right: auto;
-    margin-bottom: 7%;
     margin-left: auto;}
 .login-header,.navbar-header {
  font-size:35px;

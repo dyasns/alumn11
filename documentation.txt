@@ -1,0 +1,17 @@
+ALUMN11
+website yang dimaksudkan untuk alumni-alumni dari smkn11 untuk kembali menjalin silaturahmi dengan kawan-kawan semasa sekolah dulu dengan mengadakan reuni.
+
+#level
+ - petugas
+   petugas bertugas untuk :
+   - crud lokasi
+   lokasi adalah tempat dimana para alumni akan berkumpul, dan tempat harus telah ditinjau oleh petugas atau telah di    setujui, user dapet merequest tempat baru untuk berkumpul namun harus menunggu konfirmasi petugas
+   - crud group alumni
+   group adalah wadah untuk menghubungkan berbagai user yang se-angkatan atau se-jurusan
+   - 
+ - user
+ - master
+#alur
+#database
+#aplikasi
+#git

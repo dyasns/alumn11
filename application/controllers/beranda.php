@@ -22,13 +22,22 @@ class Beranda extends CI_Controller {
 	    $data['content']="beranda/index";
 		$this->load->view('template',$data);
 	}
+	function tp()
+	{
+	    $data['content']="user/test_page";
+		$this->load->view('template',$data);
+	}
 	function login()
 	{
-		$this->load->view('beranda/login');
+		redirect('login');
 	}
-	function daftar()
+	function register()
 	{
-		$this->load->view('beranda/register');
+		redirect('register');
+	}
+	function test(){
+	    $data['content']="beranda/test";
+		$this->load->view('template',$data);
 	}
 }
 
