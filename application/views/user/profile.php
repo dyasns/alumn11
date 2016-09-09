@@ -1,22 +1,23 @@
+   <?php
+  foreach($profile as $row){
+   $nama = $row->nama;
+   $email = $row->email;
+   $bio = $row->bio;
+   $alamat = $row->alamat;
+   $hp = $row->hp;
+   $tgl = $row->tanggal_lahir;
+   $profile_picture = $row->profile_picture;
+  }
+  ?>
  <div class="col-md-10">
  <div class="profile">
   <div class="top-profile">
   <div class="row">
   <div class="col-md-3">
   <div class="img-profile pull-left"> 
-  <img src="<?php echo base_url();?>assets/img/user/img.jpg" class="img img-rounded img-responsive">
+  <img src="<?php echo base_url();?>assets/uploads/img/<?php echo $profile_picture?>" class="img img-rounded img-responsive">
   </div>
   </div>
-  <?php
-	foreach($profile as $row){
-	 $nama = $row->nama;
-	 $email = $row->email;
-	 $bio = $row->bio;
-	 $alamat = $row->alamat;
-	 $hp = $row->hp;
-	 $tgl = $row->tanggal_lahir;
-	}
-  ?>
   <div class="col-md-8">
   <div class="name-profile">
    <p class="main-name"><b><?= $nama;?></b>&nbsp;</span><a class="small" href='<?php echo base_url();?>index.php/user/ganti_profile'><span class="fa fa-pencil"></span></a></p>

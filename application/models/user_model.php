@@ -61,5 +61,13 @@
    else
     return false;
  }
+
+ function upfile_profile($data,$id_user)
+  {
+      $this->db->where('id_user',$id_user);
+      $this->db->update('profile',$data);
+      
+      return TRUE;
+  }
 }
 ?>

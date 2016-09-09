@@ -1,7 +1,7 @@
 <div class="container-fluid top-menu">
  <div class="container text-right">
   <ul class="top-menu-list ">
-   <li><a href="#" class="toggle-sidebar-right">LOGIN</a></li>
+   <li><a href="<?php echo base_url();?>index.php/beranda/login" class="toggle-sidebar-right">LOGIN</a></li>
    <li><a href="#">FORUM</a></li>
    <li><a href="#">CONTACT</a></li>
    <li><a href="#">ABOUT US</a></li>

@@ -1,18 +1,27 @@
+<?php 
+  foreach($data as $row)
+    {
+?>
+<form action="<?=base_url()?>index.php/user/upic_profile" method="post" enctype="multipart/form-data">
  <div class="col-md-10">
  <div class="profile">
   <div class="top-profile">
   <div class="row">
    <div class="col-md-3">
     <div class="img-profile pull-left"> 
-     <img src="<?php echo base_url();?>assets/img/user/img.jpg" class="img img-rounded img-responsive">
+     <img src="<?php echo base_url();?>assets/uploads/img/<?php echo $row->profile_picture?>" class="img img-rounded img-responsive">
+     
     </div>
+      <div class="col-md-4">
+          <input type="file" name="filefoto">
+      </div>
     </div>
-  <div class="name-profile">
-    <div class="col-md-8">
-	 <p class="main-name">
-	 <b><input type='text' class="form-control form-edit-text" placeholder="Zaky Muhammad Yopi Rusyana"></b></p>
-     <p><textarea class="form-control form-edit">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</textarea></p>
-   </div>
+    <div class="name-profile">
+      <div class="col-md-8">
+  	   <p class="main-name">
+  	     <b><input type='text' class="form-control form-edit-text" value="<?php echo $row->nama?>"></b></p>
+       <p><textarea class="form-control form-edit"><?php echo $row->bio?></textarea></p>
+     </div>
    </div>
   </div>
  </div>
@@ -25,22 +34,22 @@
    <span class="input-group-addon">
 				<span class="fa fa-phone"></span>
 				</span>
-				<input type="password" class="form-control" id="password" name="password" Placeholder='Password' required>
+				<input type="text" class="form-control" id="text" name="text" Placeholder='Contact' value="<?php echo $row->hp?>"required>
   </div>
     <div class="input-group col-md-12">
    <span class="input-group-addon">
 				<span class="fa fa-location-arrow"></span>
 				</span>
-				<textarea type="password" class="form-control form-edit-height-textare" id="password" name="password" Placeholder='Password' required> invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit. Labore</textarea>
+				<textarea class="form-control form-edit-height-textare" id="password" name="password" required> <?php echo $row->alamat?></textarea>
   </div>
     <div class="input-group col-md-12">
    <span class="input-group-addon">
 				<span class="fa fa-envelope"></span>
 				</span>
-				<input type="text" class="form-control" Placeholder="hello@gmail.com">
+				<input type="text" class="form-control" value="<?php echo $row->email?> ">
 				</div>
 	<div class="col-md-5 no-padding-left">
-	 <a href="#" class="btn btn-primary input-group btn-block"><strong>Simpan</strong></a>
+	 <input type="submit" class="btn btn-primary input-group btn-block" value="Simpan">
 	</div>
    </div>
    <div class="row">
@@ -126,3 +135,6 @@
  </div>
  </div>
 </div>
+<?php 
+
+ }?>

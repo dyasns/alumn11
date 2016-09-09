@@ -111,4 +111,47 @@ class User extends CI_Controller {
 	session_destroy();
 	redirect('beranda','refresh');
 	}
+
+	function upic_profile()
+		{
+			$data = $this->profile_bawaan();
+			foreach ($data as $row) {
+			$this->load->library('upload');
+			$this->load->library('image_lib');
+	        $nmfile = "file_".time();
+	        $config['upload_path'] = './assets/uploads/img';
+	        $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp';
+	        $config['max_size'] = '2048';
+	        $config['max_width']  = '1024';
+	        $config['max_height']  = '768';
+	        $config['file_name'] = $nmfile;
+
+	        $this->upload->initialize($config);
+	        if($_FILES['filefoto']['name'])
+		        {
+		            if ($this->upload->do_upload('filefoto'))
+			            {
+			                $gbr = $this->upload->data();
+			                $gambar = array(
+			                  'profile_picture' =>$gbr['file_name']
+			                   
+			                );
+							$config['overwrite'] = TRUE;
+				        	$config['image_library'] = 'gd2';
+				        	$config['source_image'] = $this->upload->upload_path.$this->upload->file_name;
+				        	$config['maintain_ratio'] = FALSE;
+				        	$config['width'] = 150;
+				        	$config['height'] = 150;
+				        	$this->image_lib->initialize($config);
+				        	$this->image_lib->resize();
+			                $this->user_model->upfile_profile($gambar,$row->id_user);
+			                redirect("user/profile/$row->username");
+			            }
+			        else
+			        	{
+			                redirect("user/ganti_profile");
+			            }
+		        }
+		    }
+		}
 }
